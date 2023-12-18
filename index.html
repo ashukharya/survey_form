@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Customer Survey</title>
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div id="welcome-screen">
+        <h1>Welcome to Our Shop!</h1>
+
+        <button onclick="startSurvey()">Start Survey</button>
+    </div>
+    <div id="question-number"></div>
+
+    <div id="survey-container" style="display:none;">
+        <div id="question-container">
+            <h1>Customer Survey</h1>
+            <h2 id="question"></h2>
+            <div id="answer-options">
+                <!-- Buttons -->
+            </div>
+            <button class="prev" onclick="prevQuestion()">Previous</button>
+            <button class="skip" onclick="skipQuestion()">Skip</button>
+            <button class="next" onclick="nextQuestion()">Next</button>
+        </div>
+
+        <div id="confirmation-dialog" style="display:none;">
+            <p>Do you want to submit the survey?</p>
+            <button onclick="submitSurvey()">Submit</button>
+            <button onclick="cancelSubmission()">Cancel</button>
+        </div>
+    </div>
+
+    <div id="thank-you-screen" style="display:none;">
+        <h1>Thank you for your time!</h1>
+        <p>You will be redirected to the welcome screen shortly.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
